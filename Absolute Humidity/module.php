@@ -18,8 +18,8 @@ class AbsoluteHumidity extends IPSModule
 
 	//Settings    
         $this->RegisterPropertyInteger('UpdateTimer', 0);
-        $this->RegisterPropertyBoolean('CreateDewPoint', true);
-        $this->RegisterPropertyBoolean('CreateWaterContent', true);
+        $this->RegisterPropertyBoolean('CreateDewPoint', false);
+        $this->RegisterPropertyBoolean('CreateWaterContent', false);
         
 	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "AHC_Update(\$_IPS['TARGET']);");
