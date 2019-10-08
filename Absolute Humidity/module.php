@@ -43,22 +43,8 @@ class AbsoluteHumidity extends IPSModule
             [0, '%0.2f', '', 0x808080],
         ];
         $this->RegisterProfile(vtFloat, 'AHC.WaterContent', 'Drops', '', ' g/m³', 0, 0, 0, 0, $association);
-
-        // Profile "AHC.Difference"
-        $association = [
-            [-500, '%0.2f %%', 'Window-0', 16711680],
-            [0, '%0.2f %%', 'Window-0', 16711680],
-            [0.01, '+%0.2f %%', 'Window-100', 16744448],
-            [10, '+%0.2f %%', 'Window-100', 32768],
-        ];
-        $this->RegisterProfile(vtFloat, 'AHC.Difference', 'Window', '', '', 0, 0, 0, 2, $association);
-
-        // Ergebnis & Hinweis & Differenz
-        $this->MaintainVariable('Hint', 'Hinweis', vtBoolean, 'AHC.AirOrNot', 1, true);
-        $this->MaintainVariable('Result', 'Ergebnis', vtString, '', 2, true);
-        $this->MaintainVariable('Difference', 'Differenz', vtFloat, 'AHC.Difference', 3, true);
-        
-		// Taupunkt
+     
+	// Taupunkt
         $create = $this->ReadPropertyBoolean('CreateDewPoint');
         $this->MaintainVariable('DewPointOutdoor', 'Taupunkt Aussen', vtFloat, '~Temperature', 4, $create);
 
@@ -123,8 +109,10 @@ class AbsoluteHumidity extends IPSModule
 
         // universelle Gaskonstante in J/(kmol*K)
         $rg = 8314.3;
+	    
         // Molekulargewicht des Wasserdampfes in kg
         $m = 18.016;
+	    
         // Umrechnung in Kelvin
         $ko = $to + 273.15;
 
@@ -137,6 +125,7 @@ class AbsoluteHumidity extends IPSModule
         // Berechnung Taupunkt Aussen
         $vo = log10($do / 6.1078);
         $dpo = $bo * $vo / ($ao - $vo);
+	    
         // Speichern Taupunkt?
         $update = $this->ReadPropertyBoolean('CreateDewPoint');
         if ($update == true) {
