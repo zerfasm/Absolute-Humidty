@@ -3,7 +3,7 @@
 require_once __DIR__.'/../libs/traits.php';  // Allgemeine Funktionen
 
 // CLASS Absolute Humidity
-class Absolute Humidity extends IPSModule
+class AbsoluteHumidity extends IPSModule
 {
     use ProfileHelper, DebugHelper;
 
