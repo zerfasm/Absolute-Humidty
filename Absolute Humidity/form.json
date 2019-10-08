@@ -21,8 +21,8 @@
             {"label": "120 min", "value": 120 }
           ]
         },
-        {"type": "CheckBox", "name": "CreateDewPoint", "caption": "Create variables for indoor and outdoor dewpoint?" },
-        {"type": "CheckBox", "name": "CreateWaterContent", "caption": "Create variables for indoor and outdoor water content?" }
+        {"type": "CheckBox", "name": "CreateDewPoint", "caption": "Create variables for outdoor dewpoint?" },
+        {"type": "CheckBox", "name": "CreateWaterContent", "caption": "Create variables for outdoor water content?" }
       ]
     }
   ],
