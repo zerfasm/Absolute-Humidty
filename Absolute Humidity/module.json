@@ -1,6 +1,6 @@
 {
     "id": "{947EA2B7-1AA9-EAF8-058C-11EB37FD3FC6}",
-    "name": "Absolute Humidity",
+    "name": "AbsoluteHumidity",
     "type": 3,
     "vendor": "Homematic",
     "aliases": [
