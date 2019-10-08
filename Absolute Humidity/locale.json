@@ -4,7 +4,8 @@
         "Outdoor climate": "Außenklima",
         "Temperature:": "Temperatur:",
         "Humidity:": "Luftfeuchtigkeit:",
-
+        
+        "Always": "Immer",
         "Advanced settings": "Erweiterte Einstellungen",
         "Update Timer:": "Aktualisierungszeit:",
         "Create variables for indoor and outdoor dewpoint?": "Sollen die Variablen für Aussen- und Innentaupunkt angelegt werden?",
