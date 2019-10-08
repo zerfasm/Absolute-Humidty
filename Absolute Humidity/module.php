@@ -107,7 +107,7 @@ class AbsoluteHumidity extends IPSModule
         }
 
         // Minus oder Plus ;-)
-        if ($ti >= 0) {
+        if ($to >= 0) {
             // Plustemperaturen
             $ao = 7.5;
             $bo = 237.7;
@@ -127,13 +127,13 @@ class AbsoluteHumidity extends IPSModule
         $m = 18.016;
         // Umrechnung in Kelvin
         $ko = $to + 273.15;
-        $ki = $ti + 273.15;
+
         // Berechnung Sättigung Dampfdruck in hPa
         $so = 6.1078 * pow(10, (($ao * $to) / ($bo + $to)));
-        $si = 6.1078 * pow(10, (($ai * $ti) / ($bi + $ti)));
+
         // Dampfdruck in hPa
         $do = ($ho / 100) * $so;
-        $di = ($hi / 100) * $si;
+
         // Berechnung Taupunkt Aussen
         $vo = log10($do / 6.1078);
         $dpo = $bo * $vo / ($ao - $vo);
@@ -144,6 +144,7 @@ class AbsoluteHumidity extends IPSModule
         }
         // WaterContent
         $wco = pow(10, 5) * $m / $rg * $do / $ko;
+	    
         // Speichern Wassergehalt?
         $update = $this->ReadPropertyBoolean('CreateWaterContent');
         if ($update == true) {
