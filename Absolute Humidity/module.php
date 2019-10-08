@@ -16,10 +16,12 @@ class AbsoluteHumidity extends IPSModule
         $this->RegisterPropertyInteger('TempOutdoor', 0);
         $this->RegisterPropertyInteger('HumyOutdoor', 0);
 
-        $this->RegisterPropertyInteger('UpdateTimer', 15);
+	//Settings    
+        $this->RegisterPropertyInteger('UpdateTimer', 0);
         $this->RegisterPropertyBoolean('CreateDewPoint', true);
         $this->RegisterPropertyBoolean('CreateWaterContent', true);
-        // Update trigger
+        
+	// Update trigger
         $this->RegisterTimer('UpdateTrigger', 0, "AHC_Update(\$_IPS['TARGET']);");
     }
 
