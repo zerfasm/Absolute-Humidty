@@ -31,14 +31,7 @@ class AbsoluteHumidity extends IPSModule
         // Update Trigger Timer
         $this->SetTimerInterval('UpdateTrigger', 1000 * 60 * $this->ReadPropertyInteger('UpdateTimer'));
 
-        // Profile "AHC.AirOrNot"
-        $association = [
-            [0, 'Nicht Lüften!', 'Window-100', 0x00FF00],
-            [1, 'Lüften!', 'Window-0', 0xFF0000],
-        ];
-        $this->RegisterProfile(vtBoolean, 'AHC.AirOrNot', 'Window', '', '', 0, 0, 0, 0, $association);
-
-        // Profile "AHC.WaterContent"
+         // Profile "AHC.WaterContent"
         $association = [
             [0, '%0.2f', '', 0x808080],
         ];
@@ -57,13 +50,14 @@ class AbsoluteHumidity extends IPSModule
      * This function will be available automatically after the module is imported with the module control.
      * Using the custom prefix this function will be callable from PHP and JSON-RPC through:.
      *
-     * THS_Update($id);
+     * AHC_Update($id);
      */
     public function Update()
     {
         $result = 'Ergebnis konnte nicht ermittelt werden!';
         // Daten lesen
         $state = true;
+	    
         // Temp Outdoor
         $to = $this->ReadPropertyInteger('TempOutdoor');
         if ($to != 0) {
@@ -72,6 +66,7 @@ class AbsoluteHumidity extends IPSModule
             $this->SendDebug('UPDATE', 'Temperature Outdoor not set!');
             $state = false;
         }
+	    
         // Humidity Outdoor
         $ho = $this->ReadPropertyInteger('HumyOutdoor');
         if ($ho != 0) {
