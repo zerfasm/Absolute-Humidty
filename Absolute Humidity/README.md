@@ -22,11 +22,11 @@ Beschreibung des Moduls.
 ### 3. Software-Installation
 
 * Über den Module Store das 'Absolute Humidity'-Modul installieren.
-* Alternativ über das Module Control folgende URL hinzufügen
+* Alternativ über das Module Control folgende URL hinzufügen: https://github.com/zerfasm/AbsoluteHumidity
 
 ### 4. Einrichten der Instanzen in IP-Symcon
 
- Unter 'Instanz hinzufügen' ist das 'Absolute Humidity'-Modul unter dem Hersteller 'Homematic' aufgeführt.
+ Unter 'Instanz hinzufügen' ist das 'Absolute Humidity'-Modul unter dem Hersteller '(Sonstiges)' aufgeführt.
 
 __Konfigurationsseite__:
 
