@@ -1,0 +1,16 @@
+{
+  "translations": {
+    "de": {
+        "Outdoor climate": "Außenklima",
+        "Temperature:": "Temperatur:",
+        "Humidity:": "Luftfeuchtigkeit:",
+
+        "Advanced settings": "Erweiterte Einstellungen",
+        "Update Timer:": "Aktualisierungszeit:",
+        "Create variables for indoor and outdoor dewpoint?": "Sollen die Variablen für Aussen- und Innentaupunkt angelegt werden?",
+        "Create variables for indoor and outdoor water content?": "Sollen die Variablen für Aussen- und Innenwassergehalt der Luft angelegt werden?",
+        "Calculate values!": "Werte berechnen!",
+        "CALCULATE": "BERECHNEN"
+    }
+  }
+}

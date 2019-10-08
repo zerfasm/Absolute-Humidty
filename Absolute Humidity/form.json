@@ -1,0 +1,33 @@
+{
+  "elements": [
+    {"type": "ExpansionPanel", "caption": "Outdoor climate",
+      "items": [
+        {"type": "SelectVariable", "name": "TempOutdoor", "caption": "Temperature:" },
+        {"type": "SelectVariable", "name": "HumyOutdoor", "caption": "Humidity:" }
+      ]
+    },
+  
+    {"type": "ExpansionPanel", "caption": "Advanced settings",
+      "items": [
+        {"type": "Select", "name": "UpdateTimer", "caption": "Update Timer:",
+          "options": [
+            {"label": "Always", "value": 0 },
+			{"label": "1 min", "value": 1 },
+            {"label": "5 min", "value": 5 },
+			{"label": "10 min", "value": 10 },
+            {"label": "15 min", "value": 15 },
+            {"label": "30 min", "value": 30 },
+            {"label": "60 min", "value": 60 },
+            {"label": "120 min", "value": 120 }
+          ]
+        },
+        {"type": "CheckBox", "name": "CreateDewPoint", "caption": "Create variables for indoor and outdoor dewpoint?" },
+        {"type": "CheckBox", "name": "CreateWaterContent", "caption": "Create variables for indoor and outdoor water content?" }
+      ]
+    }
+  ],
+  "actions": [
+    {"type": "Label", "caption": "Calculate values!" },
+    {"type": "Button", "caption": "BERECHNEN", "onClick": "AHC_Update($id);" }
+  ]
+}
