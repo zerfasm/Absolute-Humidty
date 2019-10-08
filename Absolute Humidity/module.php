@@ -17,7 +17,7 @@ class AbsoluteHumidity extends IPSModule
         $this->RegisterPropertyInteger('HumyOutdoor', 0);
 
 	//Settings    
-        $this->RegisterPropertyInteger('UpdateTimer', 0);
+        $this->RegisterPropertyInteger('UpdateTimer', 5);
         $this->RegisterPropertyBoolean('CreateDewPoint', false);
         $this->RegisterPropertyBoolean('CreateWaterContent', false);
         
