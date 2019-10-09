@@ -142,27 +142,13 @@ class AbsoluteHumidity extends IPSModule
      * This function will be available automatically after the module is imported with the module control.
      * Using the custom prefix this function will be callable from PHP and JSON-RPC through:.
      *
-     * TSH_Duration($id, $duration);
+     * AHC_Duration($id, $duration);
      *
      * @param int $duration Wartezeit einstellen.
      */
     public function Duration(int $duration)
     {
         IPS_SetProperty($this->InstanceID, 'UpdateTimer', $duration);
-        IPS_ApplyChanges($this->InstanceID);
-    }
-
-    /**
-     * This function will be available automatically after the module is imported with the module control.
-     * Using the custom prefix this function will be callable from PHP and JSON-RPC through:.
-     *
-     * TSH_SetMessageThreshold($id, $threshold);
-     *
-     * @param int MessageThreshold Schwellert einstellen.
-     */
-    public function MessageThreshold(int $threshold)
-    {
-        IPS_SetProperty($this->InstanceID, 'MessageThreshold', $threshold);
         IPS_ApplyChanges($this->InstanceID);
     }
 }
