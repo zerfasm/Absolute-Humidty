@@ -35,7 +35,7 @@ class AbsoluteHumidity extends IPSModule
 
          // Profile "AHC.WaterContent"
         $association = [
-            [0, '%0.2f', '', 0x808080],
+            [0, '%0.2f', '', ''],
         ];
         $this->RegisterProfile(vtFloat, 'AHC.WaterContent', 'Drops', '', ' g/m³', 0, 0, 0, 0, $association);
      
