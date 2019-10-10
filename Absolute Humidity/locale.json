@@ -5,10 +5,10 @@
         "Temperature:": "Temperatur:",
         "Humidity:": "Luftfeuchtigkeit:",
         
-        "Always": "Immer",
+        "Off": "Nie",
         "Advanced settings": "Erweiterte Einstellungen",
         "Update Timer:": "Aktualisierungszeit:",
-        "Create variables for outdoor dewpoint?": "Soll die Variable für den Aussentaupunkt angelegt werden?",
+        "Create variables for outdoor dewpoint?": "Soll die Variable für den Aussentaupunkt der Luft angelegt werden?",
         "Create variables for outdoor water content?": "Soll die Variable für den Aussenwassergehalt der Luft angelegt werden?",
         "Calculate values!": "Werte berechnen!",
         "CALCULATE": "BERECHNEN"
