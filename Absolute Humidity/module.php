@@ -136,6 +136,10 @@ class AbsoluteHumidity extends IPSModule
         if ($update == true) {
             $this->SetValue('WaterContentOutdoor', $wco);
         }
+	    
+	//Alexa
+	EchoRemote_SetVolume(12966, 100);
+	EchoRemote_TextToSpeech(12966, "Das ist ein Test");
     }
 
     /**
